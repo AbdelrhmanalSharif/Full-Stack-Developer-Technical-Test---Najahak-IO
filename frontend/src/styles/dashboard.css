@@ -1,0 +1,63 @@
+@reference "../index.css";
+
+.dashboard {
+  @apply min-h-screen bg-gray-100 p-8;
+}
+
+.dashboard-title {
+  @apply text-3xl font-bold text-gray-900;
+}
+
+.dashboard-subtitle {
+  @apply mt-1 text-sm text-gray-500;
+}
+
+.dashboard-header {
+  @apply mb-8 flex items-center justify-between;
+}
+
+.request-count {
+  @apply flex flex-col items-end rounded-xl border border-gray-200 bg-white px-5 py-4;
+}
+
+.request-count-label {
+  @apply text-xs text-gray-500;
+}
+
+.request-count-number {
+  @apply mt-1 text-2xl font-bold text-gray-900;
+}
+
+.dashboard-header-actions {
+  @apply flex items-center gap-4;
+}
+
+.logout-button {
+  @apply rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50;
+}
+
+.error-message {
+  @apply mb-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700;
+}
+
+.loading-state {
+  @apply flex min-h-screen items-center justify-center text-sm text-gray-500;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    @apply p-4;
+  }
+
+  .dashboard-header {
+    @apply flex-col items-start gap-4;
+  }
+
+  .dashboard-header-actions {
+    @apply w-full items-center justify-between;
+  }
+
+  .request-count {
+    @apply items-start;
+  }
+}

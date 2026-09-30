@@ -1,0 +1,29 @@
+@reference "../index.css";
+
+.login-page {
+  @apply flex min-h-screen items-center justify-center bg-gray-100 px-4;
+}
+
+.login-card {
+  @apply w-full max-w-md rounded-2xl border border-gray-200 bg-white p-8 shadow-sm;
+}
+
+.login-card h1 {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+.login-card > p {
+  @apply mt-2 text-sm text-gray-500;
+}
+
+.login-card label {
+  @apply mt-5 block text-sm font-medium text-gray-700;
+}
+
+.login-card input {
+  @apply mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100;
+}
+
+.login-card button {
+  @apply mt-6 w-full rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700;
+}
