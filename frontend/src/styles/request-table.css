@@ -1,23 +1,41 @@
 @reference "../index.css";
 
 .request-table-container {
-  @apply overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm;
+  max-width: 1380px;
+  margin: 0 auto;
+  overflow-x: auto;
+  border: 1px solid #d8dfd6;
+  border-radius: 4px;
+  background: #fffef9;
+  box-shadow: 10px 10px 0 rgba(23, 33, 43, .08);
 }
 
 .request-table {
-  @apply w-full border-collapse;
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
 }
 
 .request-table thead {
-  @apply bg-gray-50;
+  background: #e8efe3;
 }
 
 .request-table th {
-  @apply border-b border-gray-200 px-6 py-4 text-left text-xs font-semibold uppercase tracking-wide text-gray-500;
+  border-bottom: 1px solid #d8dfd6;
+  padding: 16px 20px;
+  color: #637078;
+  font-size: .64rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .request-table td {
-  @apply border-b border-gray-100 px-6 py-4 text-sm text-gray-700;
+  border-bottom: 1px solid #edf0ea;
+  padding: 20px;
+  color: #4b5961;
+  font-size: .86rem;
 }
 
 .request-table tbody tr:last-child td {
@@ -25,49 +43,95 @@
 }
 
 .request-table tbody tr:hover {
-  @apply bg-gray-50;
+  background: #fbf4e8;
 }
 
 .request-title {
-  @apply font-medium text-gray-900;
+  color: #17212b;
+  font-weight: 700;
 }
 
 .request-description {
-  @apply max-w-xs text-gray-500;
+  display: block;
+  max-width: 280px;
+  overflow: hidden;
+  color: #637078;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .status-badge {
-  @apply inline-flex rounded-full px-3 py-1 text-xs font-semibold;
+  display: inline-flex;
+  border-radius: 2px;
+  padding: 6px 9px;
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
 }
 
 .status-new {
-  @apply bg-blue-100 text-blue-700;
+  color: #17615c;
+  background: #ccebe1;
 }
 
 .status-progress {
-  @apply bg-yellow-100 text-yellow-700;
+  color: #8b5721;
+  background: #f8dfb7;
 }
 
 .status-done {
-  @apply bg-green-100 text-green-700;
+  color: #416323;
+  background: #d9edb8;
 }
 
 .request-action {
-  @apply rounded-lg px-3 py-2 text-sm font-medium transition-colors;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  padding: 9px 12px;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  transition: transform .2s ease, filter .2s ease;
 }
 
 .request-action-start {
-  @apply bg-blue-600 text-white hover:bg-blue-700;
+  color: #fffef9;
+  background: #17615c;
 }
 
 .request-action-done {
-  @apply bg-green-600 text-white hover:bg-green-700;
+  color: #17212b;
+  background: #b3e06f;
+}
+
+.request-action:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
 }
 
 .request-completed {
-  @apply text-sm font-medium text-green-600;
+  color: #638b38;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
 }
 
 .request-empty {
-  @apply px-6 py-12 text-center text-sm text-gray-500;
+  padding: 56px 24px;
+  color: #637078;
+  font-size: .9rem;
+}
+
+@media (max-width: 768px) {
+  .request-table-container {
+    box-shadow: 6px 6px 0 rgba(23, 33, 43, .08);
+  }
+
+  .request-table th,
+  .request-table td {
+    padding: 15px 14px;
+  }
 }

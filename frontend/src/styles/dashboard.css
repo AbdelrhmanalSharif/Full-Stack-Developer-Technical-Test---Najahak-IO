@@ -1,63 +1,130 @@
 @reference "../index.css";
 
 .dashboard {
-  @apply min-h-screen bg-gray-100 p-8;
+  min-height: 100vh;
+  padding: 48px clamp(20px, 5vw, 76px);
+  background-color: #f4f6f1;
+  background-image: linear-gradient(rgba(23, 33, 43, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 33, 43, .045) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 .dashboard-title {
-  @apply text-3xl font-bold text-gray-900;
+  margin: 0;
+  color: #17212b;
+  font-family: Georgia, serif;
+  font-size: clamp(2.35rem, 5vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: -.055em;
+  line-height: .95;
 }
 
 .dashboard-subtitle {
-  @apply mt-1 text-sm text-gray-500;
+  margin: 14px 0 0;
+  color: #637078;
+  font-size: .95rem;
+  letter-spacing: .02em;
 }
 
 .dashboard-header {
-  @apply mb-8 flex items-center justify-between;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1380px;
+  margin: 0 auto 38px;
 }
 
 .request-count {
-  @apply flex flex-col items-end rounded-xl border border-gray-200 bg-white px-5 py-4;
+  display: flex;
+  min-width: 142px;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 14px 18px;
+  border: 1px solid #d8dfd6;
+  border-radius: 4px;
+  background: #fffef9;
+  box-shadow: 5px 5px 0 #dce5d8;
 }
 
 .request-count-label {
-  @apply text-xs text-gray-500;
+  color: #637078;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 
 .request-count-number {
-  @apply mt-1 text-2xl font-bold text-gray-900;
+  margin-top: 2px;
+  color: #17212b;
+  font-family: Georgia, serif;
+  font-size: 2.1rem;
+  line-height: 1;
 }
 
 .dashboard-header-actions {
-  @apply flex items-center gap-4;
+  display: flex;
+  align-items: center;
+  gap: 22px;
 }
 
 .logout-button {
-  @apply rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50;
+  cursor: pointer;
+  border: 0;
+  border-bottom: 2px solid #17212b;
+  padding: 8px 0;
+  color: #17212b;
+  background: transparent;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: color .2s ease, border-color .2s ease;
+}
+
+.logout-button:hover {
+  border-color: #ef6f61;
+  color: #ef6f61;
 }
 
 .error-message {
-  @apply mb-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700;
+  max-width: 1380px;
+  margin: 0 auto 20px;
+  border-left: 4px solid #ef6f61;
+  padding: 14px 18px;
+  color: #9d3d34;
+  background: #fff0ed;
+  font-size: .9rem;
 }
 
 .loading-state {
-  @apply flex min-h-screen items-center justify-center text-sm text-gray-500;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  color: #637078;
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
   .dashboard {
-    @apply p-4;
+    padding: 30px 16px;
   }
 
   .dashboard-header {
-    @apply flex-col items-start gap-4;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 26px;
+    margin-bottom: 28px;
   }
 
   .dashboard-header-actions {
-    @apply w-full items-center justify-between;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .request-count {
-    @apply items-start;
+    align-items: flex-start;
   }
 }

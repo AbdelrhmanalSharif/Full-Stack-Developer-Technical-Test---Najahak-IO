@@ -1,29 +1,86 @@
 @reference "../index.css";
 
 .login-page {
-  @apply flex min-h-screen items-center justify-center bg-gray-100 px-4;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 28px 20px;
+  background-color: #17212b;
+  background-image: linear-gradient(135deg, rgba(179, 224, 111, .14), transparent 38%), radial-gradient(circle at 85% 18%, #ef6f61 0 1px, transparent 2px), radial-gradient(circle at 82% 18%, #ef6f61 0 1px, transparent 2px);
+  background-size: auto, 22px 22px, 22px 22px;
 }
 
 .login-card {
-  @apply w-full max-w-md rounded-2xl border border-gray-200 bg-white p-8 shadow-sm;
+  width: min(100%, 430px);
+  padding: clamp(30px, 6vw, 54px);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 3px;
+  background: #fffef9;
+  box-shadow: 18px 18px 0 rgba(179, 224, 111, .92);
 }
 
 .login-card h1 {
-  @apply text-2xl font-bold text-gray-900;
+  margin: 0;
+  color: #17212b;
+  font-family: Georgia, serif;
+  font-size: clamp(2.3rem, 8vw, 3.4rem);
+  letter-spacing: -.06em;
+  line-height: .95;
 }
 
 .login-card > p {
-  @apply mt-2 text-sm text-gray-500;
+  margin: 16px 0 0;
+  color: #637078;
+  font-size: .95rem;
+  line-height: 1.5;
 }
 
 .login-card label {
-  @apply mt-5 block text-sm font-medium text-gray-700;
+  display: block;
+  margin-top: 27px;
+  color: #17212b;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
 
 .login-card input {
-  @apply mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100;
+  display: block;
+  width: 100%;
+  margin-top: 9px;
+  border: 0;
+  border-bottom: 2px solid #cdd7cc;
+  border-radius: 0;
+  padding: 12px 0;
+  outline: none;
+  color: #17212b;
+  background: transparent;
+  font-size: .95rem;
+  transition: border-color .2s ease;
+}
+
+.login-card input:focus {
+  border-color: #ef6f61;
 }
 
 .login-card button {
-  @apply mt-6 w-full rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700;
+  width: 100%;
+  margin-top: 36px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  padding: 15px 18px;
+  color: #17212b;
+  background: #b3e06f;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.login-card button:hover {
+  background: #c9ed91;
+  transform: translate(-2px, -2px);
 }

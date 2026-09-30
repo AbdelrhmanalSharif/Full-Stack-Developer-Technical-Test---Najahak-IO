@@ -42,7 +42,7 @@ function Login({ onLogin }: LoginProps) {
             type="password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-            placeholder="��������"
+            placeholder="Enter your password"
           />
         </label>
 
